@@ -1,0 +1,19 @@
+# FillBlanks default config (key=value)
+# CLI 参数优先级更高：命令行 > config.txt > 内置默认值
+
+# Required when CLI does not provide:
+input=ioputs/input.txt
+corpus=TOFELVob.txt
+
+# Optional:
+output=ioputs/
+blanks=10
+seed=42
+
+# AI mode (DeepSeek first version)
+ai_enabled=false
+ai_provider=deepseek
+ai_base_url=https://api.deepseek.com
+ai_model=deepseek-chat
+ai_topic=
+ai_sentence_count=6

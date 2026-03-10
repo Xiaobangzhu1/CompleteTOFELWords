@@ -1,0 +1,15 @@
+.env
+.env.*
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Generated outputs
+ioputs/
+*_input_*.txt
+*_blanks_*.txt
+*_answers_*.txt
+input_*.txt
+blanks_*.txt
+answers_*.txt
