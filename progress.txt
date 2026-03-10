@@ -79,3 +79,8 @@ progress
 完成任务：取消默认固定 seed，并调整 `.gitignore`/文档以支持公开仓库“复制模板填 key 即可用”。
 遇到问题：`.gitignore` 中 `.env.*` 会连带忽略 `.env.example`，影响模板随仓库分发。
 解决方法：添加 `!.env.example` 例外规则；将 `config.txt` 的 `seed` 默认改为空，README/QUICKSTART 增加 `cp .env.example .env` 指引；新增回归测试并通过（23 passed）。
+
+时间：2026-03-10 17:35
+完成任务：更新 README.md，增加中文说明、vibe-coding 项目定位和已知不足列表。
+遇到问题：无。
+解决方法：在 README 顶部添加 vibe-coding 标识，新增"中文说明"和"已知不足"章节（中英文双语），并在末尾增加英文 Known Limitations 段落。
