@@ -4,9 +4,9 @@ import random
 from dataclasses import dataclass
 from typing import Iterable, List, Protocol
 
-from fillblanks.frequency_ranker import get_frequency
-from fillblanks.lemmatizer import normalize_lemma
-from fillblanks.tokenizer import Token
+from completetofelwords.frequency_ranker import get_frequency
+from completetofelwords.lemmatizer import normalize_lemma
+from completetofelwords.tokenizer import Token
 
 
 @dataclass(frozen=True)

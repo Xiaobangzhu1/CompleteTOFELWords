@@ -12,42 +12,42 @@ This project is a CLI-oriented TOEFL cloze generator. The runtime pipeline is:
 1. `main.py` - Application bootstrap.
    - Delegates process lifecycle to CLI entrypoint.
 
-2. `fillblanks/cli.py` - Command Orchestration Layer.
+2. `completetofelwords/cli.py` - Command Orchestration Layer.
    - Parses CLI arguments.
    - Merges runtime config (`CLI > config.txt > defaults`).
    - Supports interactive mode and validation.
    - Executes end-to-end flow and handles user-facing errors.
 
-3. `fillblanks/pipeline.py` - Selection Pipeline Coordinator.
+3. `completetofelwords/pipeline.py` - Selection Pipeline Coordinator.
    - Coordinates sentence splitting, tokenization, and strategy invocation.
    - Exposes `select_tokens(...)` as a stable integration boundary.
 
-4. `fillblanks/selection_strategy.py` - Selection Strategy Engine.
+4. `completetofelwords/selection_strategy.py` - Selection Strategy Engine.
    - Defines strategy protocol (`SelectionStrategy`).
    - Implements `DefaultSelectionStrategy`.
    - Applies candidate constraints and staged fallback sequence.
    - Current policy: uniform sampling among candidates within stage.
 
-5. `fillblanks/sentence_splitter.py` - Sentence Boundary Detector.
+5. `completetofelwords/sentence_splitter.py` - Sentence Boundary Detector.
    - Splits raw text by `. ! ?` and preserves character spans.
 
-6. `fillblanks/tokenizer.py` - Token Extraction and Span Mapper.
+6. `completetofelwords/tokenizer.py` - Token Extraction and Span Mapper.
    - Extracts lexical tokens and maps each token to sentence and text offsets.
 
-7. `fillblanks/lemmatizer.py` - Lexeme Normalization Service.
+7. `completetofelwords/lemmatizer.py` - Lexeme Normalization Service.
    - Normalizes word forms for duplicate-lemma constraints.
    - Current implementation uses `PorterStemmer` fallback behavior.
 
-8. `fillblanks/blank_renderer.py` - Cloze Rendering Engine.
+8. `completetofelwords/blank_renderer.py` - Cloze Rendering Engine.
    - Converts selected tokens into placeholders.
    - Preserves positional replacement correctness via reverse-offset rendering.
 
-9. `fillblanks/io_utils.py` - I/O and Configuration Utilities.
+9. `completetofelwords/io_utils.py` - I/O and Configuration Utilities.
    - Reads input/corpus files.
    - Parses key-value `config.txt`.
    - Resolves output paths and writes result files.
 
-10. `fillblanks/frequency_ranker.py` - Frequency Utility Module.
+10. `completetofelwords/frequency_ranker.py` - Frequency Utility Module.
    - Provides word frequency helpers.
    - Used by current default strategy to lock 3 high-frequency selections first.
 

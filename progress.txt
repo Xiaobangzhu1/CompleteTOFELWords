@@ -84,3 +84,8 @@ progress
 完成任务：更新 README.md，增加中文说明、vibe-coding 项目定位和已知不足列表。
 遇到问题：无。
 解决方法：在 README 顶部添加 vibe-coding 标识，新增"中文说明"和"已知不足"章节（中英文双语），并在末尾增加英文 Known Limitations 段落。
+
+时间：2026-03-10 17:40
+完成任务：项目改名 FillBlanks → CompleteTOFELWords。重命名 Python 包目录 `fillblanks/` → `completetofelwords/`，更新全部 import、monkeypatch 路径、文档引用和 config 注释。
+遇到问题：无。
+解决方法：`mv` 重命名目录后，批量替换所有源文件、测试文件和文档中的 `fillblanks` → `completetofelwords`；全部 23 个测试通过。

@@ -1,4 +1,4 @@
-# FillBlanks
+# CompleteTOFELWords
 
 A CLI tool that generates TOEFL-style fill-in-the-blank exercises from an English passage.
 
@@ -9,7 +9,7 @@ A CLI tool that generates TOEFL-style fill-in-the-blank exercises from an Englis
 
 ## 中文说明
 
-FillBlanks 是一个命令行小工具，可以把一段英文文章自动生成 TOEFL 风格的选词填空练习题。
+CompleteTOFELWords 是一个命令行小工具，可以把一段英文文章自动生成 TOEFL 风格的选词填空练习题。
 
 这是一个 **vibe-coding 小玩具**：整个项目从需求、架构到代码实现，全程由 AI 对话驱动完成。它的初衷是探索"用自然语言写代码"的可能性，而非做一个完善的产品。
 

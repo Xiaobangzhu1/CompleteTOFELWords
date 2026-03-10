@@ -1,4 +1,4 @@
-from fillblanks.io_utils import resolve_output_paths, resolve_input_path, wrap_text_lines
+from completetofelwords.io_utils import resolve_output_paths, resolve_input_path, wrap_text_lines
 
 
 def test_default_output_paths():

@@ -5,7 +5,7 @@ import random
 from dataclasses import dataclass
 from typing import List
 
-from fillblanks.selection_strategy import SelectedToken
+from completetofelwords.selection_strategy import SelectedToken
 
 
 @dataclass(frozen=True)

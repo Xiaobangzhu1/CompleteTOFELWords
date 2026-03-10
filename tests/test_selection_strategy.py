@@ -1,7 +1,7 @@
 import random
 
-from fillblanks.pipeline import select_tokens
-from fillblanks.selection_strategy import SelectedToken, SelectionResult
+from completetofelwords.pipeline import select_tokens
+from completetofelwords.selection_strategy import SelectedToken, SelectionResult
 
 
 class FixedStrategy:
@@ -73,7 +73,7 @@ def test_default_strategy_picks_three_high_frequency_first(monkeypatch):
     def fake_frequency(word: str) -> float:
         return high_freq.get(word, 0.1)
 
-    monkeypatch.setattr("fillblanks.selection_strategy.get_frequency", fake_frequency)
+    monkeypatch.setattr("completetofelwords.selection_strategy.get_frequency", fake_frequency)
 
     result = select_tokens(text=text, corpus_words=corpus, blanks=5, rng=random.Random(7))
     lowers = {token.lower for token in result.selected}

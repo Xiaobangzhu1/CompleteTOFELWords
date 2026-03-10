@@ -6,14 +6,14 @@ import random
 import sys
 from pathlib import Path
 
-from fillblanks.ai_input import (
+from completetofelwords.ai_input import (
     AIRequestConfig,
     choose_topic,
     request_deepseek_text,
     validate_ai_text,
 )
-from fillblanks.blank_renderer import render_blanks
-from fillblanks.io_utils import (
+from completetofelwords.blank_renderer import render_blanks
+from completetofelwords.io_utils import (
     read_corpus_words,
     read_env_file,
     read_kv_config,
@@ -23,7 +23,7 @@ from fillblanks.io_utils import (
     wrap_text_lines,
     write_text,
 )
-from fillblanks.pipeline import select_tokens
+from completetofelwords.pipeline import select_tokens
 
 
 def _build_parser() -> argparse.ArgumentParser:

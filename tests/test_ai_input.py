@@ -1,4 +1,4 @@
-from fillblanks.ai_input import validate_ai_text
+from completetofelwords.ai_input import validate_ai_text
 
 
 def test_validate_ai_text_ok():

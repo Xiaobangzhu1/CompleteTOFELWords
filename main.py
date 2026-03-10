@@ -1,4 +1,4 @@
-from fillblanks.cli import main
+from completetofelwords.cli import main
 
 
 if __name__ == "__main__":

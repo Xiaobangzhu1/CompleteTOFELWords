@@ -2,7 +2,7 @@ import re
 from dataclasses import dataclass
 from typing import List
 
-from fillblanks.sentence_splitter import SentenceSpan
+from completetofelwords.sentence_splitter import SentenceSpan
 
 
 @dataclass(frozen=True)

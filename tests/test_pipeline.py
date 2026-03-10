@@ -1,4 +1,4 @@
-from fillblanks.pipeline import select_tokens
+from completetofelwords.pipeline import select_tokens
 
 
 def test_sentence_restriction_prefers_middle_sentences():

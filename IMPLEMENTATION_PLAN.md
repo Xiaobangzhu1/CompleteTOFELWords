@@ -1,7 +1,7 @@
 # IMPLEMENTATION_PLAN
 
 ## 任务清单（带勾选）
-- [x] 抽离选词策略模块（`fillblanks/selection_strategy.py`）。
+- [x] 抽离选词策略模块（`completetofelwords/selection_strategy.py`）。
 - [x] 主流程改为编排调用（`pipeline.py` 仅组装，不内嵌策略细节）。
 - [x] 增加 `config.txt` 读取和参数回退（CLI > config > 默认值）。
 - [x] 保留交互模式并与配置回退兼容。

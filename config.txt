@@ -1,4 +1,4 @@
-# FillBlanks default config (key=value)
+# CompleteTOFELWords default config (key=value)
 # CLI 参数优先级更高：命令行 > config.txt > 内置默认值
 
 # Required when CLI does not provide:

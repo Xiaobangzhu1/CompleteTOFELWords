@@ -12,43 +12,43 @@
 1. `main.py` - 应用启动器。
 - 仅负责启动 CLI 主入口。
 
-2. `fillblanks/cli.py` - 命令编排层。
+2. `completetofelwords/cli.py` - 命令编排层。
 - 解析命令行参数。
 - 合并运行配置（优先级：CLI > `config.txt` > 默认值）。
 - 支持交互式输入与参数校验。
 - 组织端到端执行并处理用户可见错误。
 
-3. `fillblanks/pipeline.py` - 选词流水线协调器。
+3. `completetofelwords/pipeline.py` - 选词流水线协调器。
 - 负责切句、分词、策略调用的流程编排。
 - 对外提供稳定边界：`select_tokens(...)`。
 
-4. `fillblanks/selection_strategy.py` - 选词策略引擎。
+4. `completetofelwords/selection_strategy.py` - 选词策略引擎。
 - 定义策略接口：`SelectionStrategy`。
 - 提供默认策略：`DefaultSelectionStrategy`。
 - 执行候选词约束与分阶段放宽规则。
 - 当前策略：同阶段候选词等概率无放回抽样。
 
-5. `fillblanks/sentence_splitter.py` - 句边界检测模块。
+5. `completetofelwords/sentence_splitter.py` - 句边界检测模块。
 - 按 `. ! ?` 切句，并保留句子在原文中的字符跨度。
 
-6. `fillblanks/tokenizer.py` - 分词与位置映射模块。
+6. `completetofelwords/tokenizer.py` - 分词与位置映射模块。
 - 抽取英文词 token。
 - 为每个 token 记录句索引和字符位置。
 
-7. `fillblanks/lemmatizer.py` - 词元归一服务。
+7. `completetofelwords/lemmatizer.py` - 词元归一服务。
 - 用于“词元唯一”规则的归一处理。
 - 当前实现依赖 `PorterStemmer`（含降级行为）。
 
-8. `fillblanks/blank_renderer.py` - 挖空渲染引擎。
+8. `completetofelwords/blank_renderer.py` - 挖空渲染引擎。
 - 将命中词替换为占位符。
 - 采用逆序替换确保字符位置不被前置替换破坏。
 
-9. `fillblanks/io_utils.py` - 输入输出与配置工具。
+9. `completetofelwords/io_utils.py` - 输入输出与配置工具。
 - 读取输入文本和词表。
 - 解析 `config.txt`（`key=value`）。
 - 解析输出路径并写入结果文件。
 
-10. `fillblanks/frequency_ranker.py` - 词频工具模块。
+10. `completetofelwords/frequency_ranker.py` - 词频工具模块。
 - 提供词频查询与权重计算工具函数。
 - 当前默认策略使用该模块实现“先固定选 3 个高频词”。
 

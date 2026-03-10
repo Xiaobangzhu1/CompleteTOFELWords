@@ -1,7 +1,7 @@
 import random
 
-from fillblanks.blank_renderer import render_blanks
-from fillblanks.selection_strategy import SelectedToken
+from completetofelwords.blank_renderer import render_blanks
+from completetofelwords.selection_strategy import SelectedToken
 
 
 def test_placeholder_prefix_ratio_range():

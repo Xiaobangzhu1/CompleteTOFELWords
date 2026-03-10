@@ -1,5 +1,5 @@
 import argparse
-from fillblanks.cli import _merge_config, main
+from completetofelwords.cli import _merge_config, main
 import random
 
 
@@ -125,9 +125,9 @@ def test_ai_topic_selection_not_tied_to_seed(tmp_path, monkeypatch):
             "Communities benefit."
         )
 
-    monkeypatch.setattr("fillblanks.cli.choose_topic", fake_choose_topic)
-    monkeypatch.setattr("fillblanks.cli.request_deepseek_text", fake_request)
-    monkeypatch.setattr("fillblanks.cli.validate_ai_text", lambda text, sentence_count: None)
+    monkeypatch.setattr("completetofelwords.cli.choose_topic", fake_choose_topic)
+    monkeypatch.setattr("completetofelwords.cli.request_deepseek_text", fake_request)
+    monkeypatch.setattr("completetofelwords.cli.validate_ai_text", lambda text, sentence_count: None)
 
     code = main(
         [

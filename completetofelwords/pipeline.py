@@ -4,9 +4,9 @@ import random
 from dataclasses import dataclass
 from typing import List
 
-from fillblanks.selection_strategy import DefaultSelectionStrategy, SelectedToken, SelectionStrategy
-from fillblanks.sentence_splitter import split_sentences
-from fillblanks.tokenizer import extract_tokens
+from completetofelwords.selection_strategy import DefaultSelectionStrategy, SelectedToken, SelectionStrategy
+from completetofelwords.sentence_splitter import split_sentences
+from completetofelwords.tokenizer import extract_tokens
 
 
 @dataclass(frozen=True)
