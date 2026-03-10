@@ -65,7 +65,7 @@ def read_corpus_words(path: str) -> set[str]:
 
 
 def current_date_suffix() -> str:
-    return datetime.now().strftime("%Y%m%d")
+    return datetime.now().strftime("%Y%m%d%H%M")
 
 
 def _normalize_output_prefix(output: str | None) -> tuple[str | None, Path]:

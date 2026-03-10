@@ -73,7 +73,7 @@ This project is a CLI-oriented TOEFL cloze generator. The runtime pipeline is:
    - Add new strategy classes (e.g., tiered frequency buckets) without modifying pipeline coordinator.
 
 ## 5. Runtime Output Rules
-1. Output names include date suffix `YYYYMMDD` for `input/blanks/answers`.
+1. Output names include datetime suffix `YYYYMMDDHHMM` for `input/blanks/answers`.
 2. If output prefix starts with `_`, leading underscores are removed.
 3. `input` and `blanks` content are wrapped at 80 columns for readability.
 4. Blank render prefix ratio is `[0.2, 0.6]`.

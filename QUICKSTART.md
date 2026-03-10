@@ -45,9 +45,9 @@ python main.py --interactive
 ```
 
 ## 5. Output Files
-1. Input snapshot: `input_YYYYMMDD.txt` (or `<prefix>_input_YYYYMMDD.txt`)
-2. Question file: `blanks_YYYYMMDD.txt` (or `<prefix>_blanks_YYYYMMDD.txt`)
-3. Answer file: `answers_YYYYMMDD.txt` (or `<prefix>_answers_YYYYMMDD.txt`)
+1. Input snapshot: `input_YYYYMMDDHHMM.txt` (or `<prefix>_input_YYYYMMDDHHMM.txt`)
+2. Question file: `blanks_YYYYMMDDHHMM.txt` (or `<prefix>_blanks_YYYYMMDDHHMM.txt`)
+3. Answer file: `answers_YYYYMMDDHHMM.txt` (or `<prefix>_answers_YYYYMMDDHHMM.txt`)
 4. If output prefix starts with `_`, leading underscores are removed automatically.
 5. If `--output` ends with `/`, it is treated as an output directory.
 
