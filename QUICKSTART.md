@@ -19,9 +19,14 @@ input=input.txt
 corpus=TOFELVob.txt
 output=
 blanks=10
-seed=42
+seed=
 ```
 Priority order is: CLI args > `config.txt` > built-in defaults.
+
+Copy `.env.example` to `.env` and fill API key when using AI mode:
+```bash
+cp .env.example .env
+```
 
 ## 4. Run the Program
 1. Minimal (use config fallback):
@@ -31,7 +36,7 @@ python main.py
 
 2. Fully explicit:
 ```bash
-python main.py --input input.txt --corpus TOFELVob.txt --blanks 10 --seed 42 --output demo
+python main.py --input input.txt --corpus TOFELVob.txt --blanks 10 --output demo
 ```
 
 3. Interactive mode:

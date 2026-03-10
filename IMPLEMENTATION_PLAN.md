@@ -34,6 +34,11 @@
 - [x] 修复 AI 未指定 topic 时总是同文问题（主题随机与 seed 解耦）。
 - [x] 补充回归测试（目录输出与主题随机逻辑）。
 - [x] 更新 `progress.txt` 与 `lessons.md` 记录本轮修复。
+- [x] 将挖空前缀随机区间从 `[0.2,0.6]` 调整为 `[0.4,0.6]` 并补测。
+- [x] 取消默认固定 seed（配置模板改为空，运行时不要求 seed）。
+- [x] 调整 `.gitignore` 以保留 `.env.example` 可提交，同时继续忽略 `.env`。
+- [x] 更新 README/QUICKSTART，明确“复制 `.env.example` 填 key 即可使用”。
+- [x] 更新 `progress.txt` 与 `lessons.md` 记录本轮改动。
 
 ## 执行顺序与说明
 1. 先更新 PRD，再改代码，再自测，再更新 `progress.txt`。
@@ -49,4 +54,5 @@
 - 本次增量补充：`answers` 输出文件名与 `input/blanks` 一致采用日期后缀策略。
 - 本次新增目标：文件命名去前导下划线、完善 `.gitignore`、补齐 `README.md` 与说明文档一致性。
 - 本次修复目标：输出目录语义正确、AI 文本不再固定为同一篇。
+- 本次新增目标：默认不强制 seed，公开仓库可一键复制 `.env.example` 使用。
 - 当前偏离：暂无；若 AI 文本复现需求后续增加，将通过缓存方案补齐。

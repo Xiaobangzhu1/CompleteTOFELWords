@@ -52,6 +52,15 @@ def test_merge_config_cli_overrides(tmp_path):
     assert merged.seed == 3
 
 
+def test_merge_config_empty_seed_keeps_none(tmp_path):
+    cfg = tmp_path / "config.txt"
+    cfg.write_text("input=a.txt\ncorpus=b.txt\nseed=\n", encoding="utf-8")
+
+    args = _base_args(str(cfg))
+    merged = _merge_config(args)
+    assert merged.seed is None
+
+
 def test_merge_config_env_key_over_env_file(tmp_path, monkeypatch):
     cfg = tmp_path / "config.txt"
     env_file = tmp_path / ".env"

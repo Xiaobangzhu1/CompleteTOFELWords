@@ -8,7 +8,7 @@ corpus=TOFELVob.txt
 # Optional:
 output=ioputs/
 blanks=10
-seed=42
+seed=
 
 # AI mode (DeepSeek first version)
 ai_enabled=false

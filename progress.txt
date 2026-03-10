@@ -69,3 +69,13 @@ progress
 完成任务：修复“总是同一篇文章”和“未输出到 ioputs 目录”两个问题。
 遇到问题：`output=ioputs/` 被当作前缀字符串而不是目录；同时未指定 topic 时主题随机绑定 `seed`，导致文章趋于固定。
 解决方法：在路径归一化中增加“尾随斜杠=目录”语义；将 AI 主题随机改为 `SystemRandom` 与 `seed` 解耦，并新增回归测试，最终全量通过（22 passed）。
+
+时间：2026-03-10 17:16
+完成任务：将挖空前缀比例区间从 `[0.2,0.6]` 调整为 `[0.4,0.6]`。
+遇到问题：比例规则变更后，渲染测试断言下界仍为 `0.2`，会与新规则冲突。
+解决方法：同步更新 `blank_renderer.py` 与 `test_blank_renderer.py` 的区间定义并回归测试通过（22 passed）。
+
+时间：2026-03-10 17:20
+完成任务：取消默认固定 seed，并调整 `.gitignore`/文档以支持公开仓库“复制模板填 key 即可用”。
+遇到问题：`.gitignore` 中 `.env.*` 会连带忽略 `.env.example`，影响模板随仓库分发。
+解决方法：添加 `!.env.example` 例外规则；将 `config.txt` 的 `seed` 默认改为空，README/QUICKSTART 增加 `cp .env.example .env` 指引；新增回归测试并通过（23 passed）。

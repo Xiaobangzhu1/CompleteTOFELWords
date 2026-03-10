@@ -16,7 +16,7 @@ def test_placeholder_prefix_ratio_range():
     text = "photosynthesis"
     rendered_text, _ = render_blanks(text, [token], random.Random(1))
 
-    # prefix is before the first whitespace and should respect [0.2, 0.6] of token length.
+    # prefix is before the first whitespace and should respect [0.4, 0.6] of token length.
     prefix = rendered_text.split(" ", 1)[0]
-    assert len(prefix) >= int(len(token.surface) * 0.2)
+    assert len(prefix) >= int(len(token.surface) * 0.4)
     assert len(prefix) <= int(len(token.surface) * 0.6)

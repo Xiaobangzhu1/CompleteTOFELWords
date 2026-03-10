@@ -16,7 +16,7 @@ class RenderedBlank:
 
 
 def _build_placeholder(surface: str, number: int, rng: random.Random) -> str:
-    ratio = rng.uniform(0.2, 0.6)
+    ratio = rng.uniform(0.4, 0.6)
     keep = max(1, math.floor(len(surface) * ratio))
     keep = min(keep, len(surface))
     prefix = surface[:keep]
